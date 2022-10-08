@@ -33,7 +33,7 @@ def get_result(end_date) -> tuple:
     except ValueError:
         end_date = now.strftime('%Y-%m-%d')
 
-    # если дата старта == сегодня, то программе не нужна дата конца
+    # если new_start_date == now, то программе не нужна end_date
     # ибо данные будут браться за сегодняшний день
     if new_start_date == now.strftime('%Y-%m-%d'):
         end_date = new_start_date
